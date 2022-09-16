@@ -37,8 +37,8 @@ app.post('/games/:id/ads', async (req, res) => {
       yearsPlaying: body.yearsPlaying,
       discord: body.discord,
       weekDays: body.weekDays.join(','),
-      minStart: convertMin(body.minStart),
-      minEnd: convertMin(body.minEnd), 
+      minStart: 5,
+      minEnd: 5, 
       useVoice: body.useVoice, 
       createdAt: body.createdAt, 
     }
@@ -55,7 +55,7 @@ app.get('/games/:id/ads', async (req, res) => {
       id: true,
       name: true,
       weekDays: true,
-      createdAt: true,
+      yearsPlaying: true,
       minEnd: true,
       minStart: true,
       useVoice: true
